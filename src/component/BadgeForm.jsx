@@ -24,7 +24,7 @@ export default function BadgeForm({ handleChange }) {
   };
 
   return (
-    <div>
+    <>
       <h1>Nuevo asistente</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -74,6 +74,6 @@ export default function BadgeForm({ handleChange }) {
         </div>
         <button className="btn btn-info float-right">Enviar</button>
       </form>
-    </div>
+    </>
   );
 }

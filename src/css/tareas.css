@@ -1,0 +1,10 @@
+.titulo {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-top: 2rem;
+    display: flex;
+   
+}

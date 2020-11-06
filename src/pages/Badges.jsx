@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import Navbar from "../component/Navbar";
 import BadgeHero from "../component/BadgeHero";
 import BadgeList from "../component/BadgeList";
+import { Link } from "react-router-dom";
 
 export default function Badges() {
   const [data, setData] = useState([
@@ -70,15 +71,15 @@ export default function Badges() {
   //     },
   //   ];
   return (
-    <div>
-      <Navbar />
+    <>
+  
       <BadgeHero />
       <div className="container">
         <div className="row mb-3">
           <div className="col-6 offset-3">
-            <a href="#" className="btn btn-info float-right">
+            <Link to="/badges/new " className="btn btn-info float-right">
               Nuevo ingreso
-            </a>
+            </Link>
           </div>
         </div>
         <div className="row">
@@ -87,6 +88,6 @@ export default function Badges() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
