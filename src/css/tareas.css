@@ -1,10 +1,19 @@
 .titulo {
-    padding-top: 1rem;
-    text-align: center;
+  padding-top: 1rem;
+  text-align: center;
 }
 
 .form-group {
-    margin-top: 2rem;
-    display: flex;
-   
+  margin-top: 2rem;
+  display: flex;
+}
+.lista-tarea {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.list-group-item {
+  width: 80%;
+  margin-right: 5px;
 }

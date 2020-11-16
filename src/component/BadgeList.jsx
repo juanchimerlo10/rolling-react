@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/badge_list.css";
+import Gravatar from "./Gravatar";
 
 export default function BadgeList({ data }) {
   return (
@@ -8,11 +9,15 @@ export default function BadgeList({ data }) {
         {data.map((badge) => {
           return (
             <li key={badge.id} className="BadgesListItem mb-3">
-              <img
+              <Gravatar
+                email={badge.email}
+                className="BadgesListItem__avatar"
+              />
+              {/* <img
                 className="BadgesListItem__avatar "
                 src={badge.avatarUrl}
                 alt="Avatar"
-              />
+              /> */}
               <div>
                 <div>
                   {badge.firstName} {badge.lastName}
