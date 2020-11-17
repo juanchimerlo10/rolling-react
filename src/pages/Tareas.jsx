@@ -6,7 +6,8 @@ import { useState } from "react";
 import Lista from "../component/Lista";
 import { useEffect } from "react";
 const Tareas = () => {
-  //traigo de localstorage al montar el componente
+  //traigo de localstorage al montar el componente, en caso de estar vacio
+  //inicializo array
 
   const [tarea, setTarea] = useState("");
   const [lista, setLista] = useState(
