@@ -10,22 +10,13 @@ const Tareas = () => {
 
   const [tarea, setTarea] = useState("");
   const [lista, setLista] = useState(
-    JSON.parse(localStorage.getItem("tareas")) || []
+    JSON.parse(localStorage.getItem("arreglos")) || []
   );
 
   //se ejecuta cuando el componente sea montado y actualizado por medio de state
   useEffect(() => {
     console.log("Use effect");
     localStorage.setItem("arreglos", JSON.stringify(lista));
-    // {
-
-    //     ? console.log("local tiene datos") &&
-    //       //Si agrego o quito tarea, actualizo LS
-    //       localStorage.setItem([lista])
-    //     : console.log("no existe");
-    //   //creo "arreglos" dentro de local storage
-    //   localStorage.setItem([lista]);
-    // }
     //useEffect se fija en el cambio de state de lista
   }, [lista]);
 
@@ -37,6 +28,7 @@ const Tareas = () => {
     //operador spread me trae todo lo que hay en lista
     //y agrega el state de tarea
     setLista([...lista, tarea]);
+
     console.log(lista);
     setTarea("");
   };
