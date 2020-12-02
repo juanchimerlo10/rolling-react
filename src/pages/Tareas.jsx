@@ -17,21 +17,15 @@ const Tareas = () => {
   useEffect(() => {
     console.log("Use effect");
     localStorage.setItem("arreglos", JSON.stringify(lista));
-    // {
-
-    //     ? console.log("local tiene datos") &&
-    //       //Si agrego o quito tarea, actualizo LS
-    //       localStorage.setItem([lista])
-    //     : console.log("no existe");
-    //   //creo "arreglos" dentro de local storage
-    //   localStorage.setItem([lista]);
-    // }
+  
     //useEffect se fija en el cambio de state de lista
+    //en caso de [] estar vacio, se ejecuta solo una vez  
   }, [lista]);
 
   //manejador de evento de onSubmit
   //handleSubmit guarda en el array la tarea del state
   const handlerSubmit = (e) => {
+    localStorage.getItem('arreglos')
     e.preventDefault();
     console.log("funcion");
     //operador spread me trae todo lo que hay en lista
