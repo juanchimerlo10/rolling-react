@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Layaout from "./Layaout";
 import Error404 from "../pages/Error404";
 import Tareas from "../pages/Tareas";
+import PaletaColor from "../pages/PaletaColor";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route exact path="/badges" component={Badges} />
           <Route exact path="/badges/new" component={BadgeNew} />
           <Route exact path="/tareas" component={Tareas} />
+          <Route exact path="/paletacolor" component={PaletaColor} />
           <Route component={Error404} />
         </Switch>
       </Layaout>
